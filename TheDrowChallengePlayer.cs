@@ -27,5 +27,14 @@ namespace TheDrowChallenge
                 player.AddBuff(mod.BuffType<Decay>(), 60);
             }
         }
+
+        public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource)
+        {
+            if (damageSource.SourceOtherIndex == 8 && player.HasBuff(mod.BuffType<Decay>()) && !pvp)
+            {
+                damageSource = PlayerDeathReason.ByCustomReason(player.name + " decayed from being on the surface too long");
+            }
+            return true;
+        }
     }
 }

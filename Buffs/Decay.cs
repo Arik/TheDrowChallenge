@@ -31,10 +31,6 @@ namespace TheDrowChallenge.Buffs
                 }
                 player.lifeRegenTime = 0;
                 player.lifeRegen -= 256;
-                /*if (player.statLife <= 0)
-                {
-                    player.KillMe(PlayerDeathReason.ByCustomReason(player.name + " decayed from being on the surface too long"), 10.0, 0);
-                }*/
             } else
             {
                 player.DelBuff(buffIndex);
