@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria;
-using Terraria.DataStructures;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace TheDrowChallenge.Buffs
@@ -30,7 +24,7 @@ namespace TheDrowChallenge.Buffs
                     player.lifeRegen = 0;
                 }
                 player.lifeRegenTime = 0;
-                player.lifeRegen -= 256;
+                player.lifeRegen -= 128;
             } else
             {
                 player.DelBuff(buffIndex);

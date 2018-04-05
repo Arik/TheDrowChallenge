@@ -15,12 +15,13 @@ namespace TheDrowChallenge.Items
 
         public override void SetDefaults()
 		{
-            item.value = 1000;
+            item.value = 4000;
             item.useStyle = 2;
             item.useAnimation = 17;
             item.useTime = 17;
             item.consumable = true;
             item.useTurn = true;
+            item.rare = 3;
             item.maxStack = 30;
             item.width = 14;
             item.height = 24;
