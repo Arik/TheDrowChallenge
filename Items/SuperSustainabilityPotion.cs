@@ -9,7 +9,7 @@ namespace TheDrowChallenge.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Greater Sustainability Potion");
+			DisplayName.SetDefault("Super Sustainability Potion");
 			Tooltip.SetDefault("Prevents decay on the surface");
 		}
 
@@ -45,10 +45,10 @@ namespace TheDrowChallenge.Items
 		{
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType<GreaterSustainabilityPotion>());
-            recipe.AddIngredient(ItemID.LunarTabletFragment, 1);
             recipe.AddIngredient(ItemID.Ectoplasm, 1);
-            recipe.AddIngredient(ItemID.SoulofLight, 1);
-            recipe.AddIngredient(ItemID.SoulofNight, 1);
+            recipe.AddIngredient(ItemID.SoulofFright, 1);
+            recipe.AddIngredient(ItemID.SoulofMight, 1);
+            recipe.AddIngredient(ItemID.SoulofSight, 1);
             recipe.AddTile(TileID.Bottles);
             recipe.SetResult(this);
             recipe.AddRecipe();

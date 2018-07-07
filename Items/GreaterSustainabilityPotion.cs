@@ -44,11 +44,12 @@ namespace TheDrowChallenge.Items
         public override void AddRecipes()
 		{
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType<SustainabilityPotion>());
+            recipe.AddIngredient(mod.ItemType<SustainabilityPotion>(), 2);
+            recipe.AddIngredient(ItemID.Blinkroot, 1);
             recipe.AddIngredient(ItemID.Fireblossom, 1);
             recipe.AddIngredient(ItemID.Moonglow, 1);
             recipe.AddTile(TileID.Bottles);
-            recipe.SetResult(this);
+            recipe.SetResult(this, 2);
             recipe.AddRecipe();
         }
 	}

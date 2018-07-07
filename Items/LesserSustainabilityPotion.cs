@@ -43,17 +43,33 @@ namespace TheDrowChallenge.Items
         public override void AddRecipes()
 		{
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.BottledWater);
-            recipe.AddIngredient(ItemID.Blinkroot);
+            recipe.AddIngredient(ItemID.BottledWater, 2);
             recipe.AddIngredient(ItemID.IronOre);
+            recipe.AddIngredient(ItemID.ShadowScale);
             recipe.AddTile(TileID.Bottles);
             recipe.SetResult(this, 2);
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.BottledWater);
-            recipe.AddIngredient(ItemID.Blinkroot);
+            recipe.AddIngredient(ItemID.BottledWater, 2);
+            recipe.AddIngredient(ItemID.IronOre);
+            recipe.AddIngredient(ItemID.TissueSample);
+            recipe.AddTile(TileID.Bottles);
+            recipe.SetResult(this, 2);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.BottledWater, 2);
             recipe.AddIngredient(ItemID.LeadOre);
+            recipe.AddIngredient(ItemID.ShadowScale);
+            recipe.AddTile(TileID.Bottles);
+            recipe.SetResult(this, 2);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.BottledWater, 2);
+            recipe.AddIngredient(ItemID.LeadOre);
+            recipe.AddIngredient(ItemID.TissueSample);
             recipe.AddTile(TileID.Bottles);
             recipe.SetResult(this, 2);
             recipe.AddRecipe();

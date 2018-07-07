@@ -45,16 +45,18 @@ namespace TheDrowChallenge.Items
 		{
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType<LesserSustainabilityPotion>());
+            recipe.AddIngredient(ItemID.BeeWax, 1);
+            recipe.AddIngredient(ItemID.GlowingMushroom, 1);
             recipe.AddIngredient(ItemID.GoldOre, 1);
-            recipe.AddIngredient(ItemID.GlowingMushroom, 3);
             recipe.AddTile(TileID.Bottles);
             recipe.SetResult(this);
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod.ItemType<LesserSustainabilityPotion>());
+            recipe.AddIngredient(ItemID.BeeWax, 1);
+            recipe.AddIngredient(ItemID.GlowingMushroom, 1);
             recipe.AddIngredient(ItemID.PlatinumOre, 1);
-            recipe.AddIngredient(ItemID.GlowingMushroom, 3);
             recipe.AddTile(TileID.Bottles);
             recipe.SetResult(this);
             recipe.AddRecipe();
