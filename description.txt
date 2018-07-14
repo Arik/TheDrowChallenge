@@ -1,3 +1,5 @@
 The Drow Challenge is simple: the surface kills you very quickly. Creating a new world will set the spawnpoint underground (new characters will start with 1 torch).
 
 This mod also adds a new potion type (sustainability) in order to allow you to go to the surface temporarily. This will allow you to fight skeletron, explore floating islands, and more without dying (but on a time limit).
+
+In addition, this mod also allows the Eye of Cthulhu and the Mechanical Bosses to spawn underground.
