@@ -1,34 +1,25 @@
-﻿using TheDrowChallenge.Buffs;
-using System.Collections.Generic;
-using Terraria.DataStructures;
-using Terraria.ModLoader;
+﻿using System.Collections.Generic;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.ModLoader;
+using TheDrowChallenge.Buffs;
 
-namespace TheDrowChallenge
-{
-	class TheDrowChallengePlayer : ModPlayer
-	{
-		public override void SetupStartInventory(IList<Item> items)
-		{
-			Item item = new Item();
-			item.SetDefaults(ItemID.Torch);
-			items.Add(item);
+namespace TheDrowChallenge {
+	class TheDrowChallengePlayer : ModPlayer {
+		public override List<Item> AddStartingItems(bool mediumCoreDeath) {
+			return new List<Item> { new Item(ItemID.Torch) };
 		}
 
-		public override void PreUpdateBuffs()
-		{
-			if ((player.position.Y + player.height) / 16f <= Main.worldSurface && !player.HasBuff(mod.BuffType<Sustainability>()))
-			{
-				player.AddBuff(mod.BuffType<Decay>(), 60);
+		public override void PreUpdateBuffs() {
+			if ((Player.position.Y + Player.height) / 16f <= Main.worldSurface && !Player.HasBuff(ModContent.BuffType<Sustainability>())) {
+				Player.AddBuff(ModContent.BuffType<Decay>(), 60);
 			}
 		}
 
-		public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource)
-		{
-			if (damageSource.SourceOtherIndex == 8 && player.HasBuff(mod.BuffType<Decay>()) && !pvp)
-			{
-				damageSource = PlayerDeathReason.ByCustomReason(player.name + " decayed from being on the surface too long");
+		public override bool PreKill(double damage, int hitDirection, bool pvp, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource) {
+			if (damageSource.SourceOtherIndex == 8 && Player.HasBuff(ModContent.BuffType<Decay>()) && !pvp) {
+				damageSource = PlayerDeathReason.ByCustomReason(Player.name + " decayed from being on the surface");
 			}
 			return true;
 		}

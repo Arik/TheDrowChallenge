@@ -1,6 +1,7 @@
+.vs/
 obj/
 bin/
-.vs/
+Properties/
 TheDrowChallenge.csproj
 TheDrowChallenge.csproj.user
 TheDrowChallenge.sln

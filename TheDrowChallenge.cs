@@ -1,17 +1,9 @@
+using MonoMod.Cil;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace TheDrowChallenge
-{
-	class TheDrowChallenge : Mod
-	{
-		public TheDrowChallenge()
-		{
-			Properties = new ModProperties()
-			{
-				Autoload = true,
-				AutoloadGores = true,
-				AutoloadSounds = true
-			};
-		}
-	}
+namespace TheDrowChallenge {
+	class TheDrowChallenge : Mod {}
 }
