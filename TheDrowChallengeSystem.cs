@@ -1,11 +1,8 @@
 ﻿using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace TheDrowChallenge {
 	class TheDrowChallengeSystem : ModSystem {
-		// TODO: Allow bosses to spawn underground via https://github.com/tModLoader/tModLoader/wiki/Expert-IL-Editing
-
 		const int y_range = 25;
 		public override void PostWorldGen() {
 			bool found = false;
