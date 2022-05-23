@@ -23,7 +23,7 @@ namespace TheDrowChallenge.Buffs {
 				}
 				player.lifeRegenTime = 0;
 				modplayer.decay_accleration = Math.Clamp(++modplayer.decay_accleration, 0, 120);
-				player.lifeRegen -= (int)(128 * modplayer.decay_accleration / 120.0);
+				player.lifeRegen -= (int)(256 * modplayer.decay_accleration / 120.0);
 				int dustnumber = Dust.NewDust(new Vector2(player.position.X, player.position.Y), 16, 16, DustID.Wraith, player.velocity.X, player.velocity.Y, 100, default, 2.5f);
 				Main.dust[dustnumber].noGravity = true;
 			} else {

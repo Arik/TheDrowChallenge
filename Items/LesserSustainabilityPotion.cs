@@ -22,7 +22,7 @@ namespace TheDrowChallenge.Items {
 			Item.height = 24;
 			Item.UseSound = SoundID.Item3;
 			Item.buffType = ModContent.BuffType<Sustainability>();
-			Item.buffTime = 3600;
+			Item.buffTime = 60 * 60;
 		}
 
 		public override bool CanUseItem(Player player) {
@@ -30,7 +30,7 @@ namespace TheDrowChallenge.Items {
 		}
 
 		public override bool? UseItem(Player player) {
-			player.AddBuff(ModContent.BuffType<SustainabilitySickness>(), 54000);
+			player.AddBuff(ModContent.BuffType<SustainabilitySickness>(), Item.buffTime + 60 * 60);
 			return true;
 		}
 
