@@ -8,13 +8,15 @@ using TheDrowChallenge.Buffs;
 
 namespace TheDrowChallenge {
 	class TheDrowChallengePlayer : ModPlayer {
-		public override List<Item> AddStartingItems(bool mediumCoreDeath) {
-			return new List<Item> { new Item(ItemID.Torch) };
+		public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath) {
+			return new[] { new Item(ItemID.Torch) };
 		}
 
 		public override void PreUpdateBuffs() {
 			if ((Player.position.Y + Player.height) / 16f <= Main.worldSurface && !Player.HasBuff(ModContent.BuffType<Sustainability>())) {
-				Player.AddBuff(ModContent.BuffType<Decay>(), 60);
+				Player.AddBuff(ModContent.BuffType<Decay>(), 2);  // Needs to be longer than a tick to show up as a debuff.
+			} else {
+				decay_accleration = 0;
 			}
 		}
 
