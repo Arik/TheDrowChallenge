@@ -8,12 +8,12 @@ namespace TheDrowChallenge {
 			IL.Terraria.Main.UpdateTime += HookUndergroundBossSpawns;
 		}
 
-		private void HookUndergroundBossSpawns(ILContext il) {  // Remove the surface check from the boss spawns
+		private void HookUndergroundBossSpawns(ILContext il) {  // Remove the surface check for EoC and mech boss spawns
 			ILCursor c = new ILCursor(il);
 			while (c.TryGotoNext(i => i.MatchLdsfld(typeof(Main), nameof(Main.player)))) {
-				if (!c.Next.Next.Next.Next.Next.Next.Next.MatchLdsfld(typeof(Main), nameof(Main.worldSurface)))
-					continue;
-				c.RemoveRange(10);
+				if (c.Next.Next.Next.Next.Next.Next.Next.MatchLdsfld(typeof(Main), nameof(Main.worldSurface))) {
+					c.RemoveRange(10);
+				}
 			}
 		}
 	}
