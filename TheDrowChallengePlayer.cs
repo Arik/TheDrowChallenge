@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -9,6 +10,9 @@ using TheDrowChallenge.Buffs;
 namespace TheDrowChallenge {
 	class TheDrowChallengePlayer : ModPlayer {
 		public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath) {
+			if (Player.difficulty == PlayerDifficultyID.Creative) {
+				return Enumerable.Empty<Item>();
+			}
 			return new[] { new Item(ItemID.Torch) };
 		}
 

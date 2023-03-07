@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 using TheDrowChallenge.Buffs;
@@ -7,6 +8,7 @@ namespace TheDrowChallenge.Items {
 	public abstract class BaseSustainabilityPotion : ModItem {
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Prevents decay on the surface");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 20;
 		}
 
 		public override void SetDefaults() {
