@@ -6,7 +6,6 @@ namespace TheDrowChallenge.Items {
 	public class SustainabilityPotion : BaseSustainabilityPotion {
 		public override void SetStaticDefaults() {
 			base.SetStaticDefaults();
-			DisplayName.SetDefault("Sustainability Potion");
 		}
 
 		public override void SetDefaults() {

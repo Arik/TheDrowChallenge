@@ -7,8 +7,6 @@ using Terraria.ModLoader;
 namespace TheDrowChallenge.Buffs {
 	class Decay : ModBuff {
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Decay");
-			Description.SetDefault("The surface hurts");
 			Main.debuff[Type] = true;
 			Main.buffNoSave[Type] = false;
 			Main.buffNoTimeDisplay[Type] = true;

@@ -1,0 +1,42 @@
+Mods: {
+	TheDrowChallenge: {
+		Buffs: {
+			Decay: {
+				DisplayName: Decay
+				Description: The surface hurts
+			}
+
+			Sustainability: {
+				DisplayName: Sustainability
+				Description: Prevents decay on the surface
+			}
+
+			SustainabilitySickness: {
+				DisplayName: Sustainability Sickness
+				Description: Cannot consume anymore sustainability items
+			}
+		}
+
+		Items: {
+			GreaterSustainabilityPotion: {
+				DisplayName: Greater Sustainability Potion
+				Tooltip: Prevents decay on the surface
+			}
+
+			LesserSustainabilityPotion: {
+				DisplayName: Lesser Sustainability Potion
+				Tooltip: Prevents decay on the surface
+			}
+
+			SuperSustainabilityPotion: {
+				DisplayName: Super Sustainability Potion
+				Tooltip: Prevents decay on the surface
+			}
+
+			SustainabilityPotion: {
+				DisplayName: Sustainability Potion
+				Tooltip: Prevents decay on the surface
+			}
+		}
+	}
+}
