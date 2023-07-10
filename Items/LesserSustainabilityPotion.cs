@@ -9,7 +9,7 @@ namespace TheDrowChallenge.Items {
 
 		public override void SetDefaults() {
 			base.SetDefaults();
-			Item.value = 1000;
+			Item.value = Item.sellPrice(0, 0, 1);
 			Item.buffTime = 60 * 60;
 		}
 
